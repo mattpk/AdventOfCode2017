@@ -18,3 +18,6 @@ For part 2, I simulated the coordinate system with a hash table and simulated th
 For part 1, using a HashSet filters duplicate words. If the number of unique tokens is equal to the number of tokens, then the passphrase is valid. This runs in O(n) time, given n tokens.
 
 For part 2, I used the same approach, but sorting the tokens beforehand. This way, anagrams will collide in the set. This runs in O(n log m) time, with m being the length of the word. If necessary, the log factor can be reduced to a constant by using a radix sort on the 26-letter alphabet, or by using a (character -> frequency) Map structure to be passed in the set.
+
+#### Day 5 - [A Maze of Twisty Trampolines, All Alike](http://adventofcode.com/2017/day/5)
+I solved this problem by simulating the jumps, which is admittedly a naive solution. But it executes in less than a second thanks to the small input size. An interesting problem, will take another look at this later.
