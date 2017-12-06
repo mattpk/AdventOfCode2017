@@ -21,3 +21,6 @@ For part 2, I used the same approach, but sorting the tokens beforehand. This wa
 
 #### Day 5 - [A Maze of Twisty Trampolines, All Alike](http://adventofcode.com/2017/day/5)
 I solved this problem by simulating the jumps, which is admittedly a naive solution. But it executes in less than a second thanks to the small input size. An interesting problem, will take another look at this later.
+
+#### Day 6 - [Memory Reallocation](http://adventofcode.com/2017/day/6)
+Given the small input it is simplest to simulate the debugger routine described in the problem. I used a HashMap in order to record if a previous permutation has been seen before. The extension for part 2 was to augment the HashMap to store the iteration at which the first occurence of the key was found, and return the difference once the loop is detected.
