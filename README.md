@@ -24,3 +24,17 @@ I solved this problem by simulating the jumps, which is admittedly a naive solut
 
 #### Day 6 - [Memory Reallocation](http://adventofcode.com/2017/day/6)
 Given the small input it is simplest to simulate the debugger routine described in the problem. I used a HashMap in order to record if a previous permutation has been seen before. The extension for part 2 was to augment the HashMap to store the iteration at which the first occurence of the key was found, and return the difference once the loop is detected.
+
+#### Day 7 - [Recursive Circus](http://adventofcode.com/2017/day/7)
+I faced a little bit of language friction writing this problem in Java. Now that I know what kind of problems to expect, I might use this opportunity to pick up a new language, such as _Go_.
+
+I built a tree data structure. The first part involves an algorithm to find the root of the tree -- simply follow the parent back from any node. This takes O(n) time, given n nodes.
+The second part was a recursive solution. The idea is to find the first set of children with opposing sums of weights, always checking children before parents.
+
+Unfortunately, there is an edge case in the problem where the solution is ambiguous. An example is
+```$xslt
+left (10)
+right (20)
+root (30) -> left, right
+```
+In this list, exactly one program is the wrong weight. But it is either left or right, and there is no way to determine which. Luckily, this doesn't appear in my input!
