@@ -28,7 +28,7 @@ Given the small input it is simplest to simulate the debugger routine described 
 #### Day 7 - [Recursive Circus](http://adventofcode.com/2017/day/7)
 I faced a little bit of language friction writing this problem in Java. Now that I know what kind of problems to expect, I might use this opportunity to pick up a new language, such as _Go_.
 
-I built a tree data structure. The first part involves an algorithm to find the root of the tree -- simply follow the parent back from any node. This takes O(n) time, given n nodes.
+I built a tree data structure. The first part involves an algorithm to find the root of the tree -- simply follow the parent back from any node. This takes O(n) time, since I need to construct the tree. Of course, this would be O(log n) if a balanced tree was already provided.
 The second part was a recursive solution. The idea is to find the first set of children with opposing sums of weights, always checking children before parents.
 
 Unfortunately, there is an edge case in the problem where the solution is ambiguous. An example is
@@ -38,3 +38,6 @@ right (20)
 root (30) -> left, right
 ```
 In this list, exactly one program is the wrong weight. But it is either left or right, and there is no way to determine which. Luckily, this doesn't appear in my input!
+
+#### Day 8 - [I Heard You Like Registers](http://adventofcode.com/2017/day/8)
+I simulated the described _CPU_, maintaining registries in a HashMap. This takes linear time complexity and space complexity over the number of instructions. String parsing and matching operators can be tedious, but the puzzle is relatively straightforward.
