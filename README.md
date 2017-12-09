@@ -41,3 +41,7 @@ In this list, exactly one program is the wrong weight. But it is either left or 
 
 #### Day 8 - [I Heard You Like Registers](http://adventofcode.com/2017/day/8)
 I simulated the described _CPU_, maintaining registries in a HashMap. This takes linear time complexity and space complexity over the number of instructions. String parsing and matching operators can be tedious, but the puzzle is relatively straightforward.
+
+#### Day 9 - [Stream Processing](http://adventofcode.com/2017/day/9)
+I wrote a function that simultaneously filters out, and counts the number of garbage characters removed. If this isn't a better example of a needing a function with multiple return values, I don't know what is! I passed in a StringBuilder reference as a quick workaround. This solves part 2!
+Then, my part 1 function simply steps into and out of the brackets, keeping track of the current depth of the bracket tree, and keeping a tally of the depths once each bracket is closed. Both solutions run in linear time and space.
