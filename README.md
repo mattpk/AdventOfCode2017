@@ -45,3 +45,6 @@ I simulated the described _CPU_, maintaining registries in a HashMap. This takes
 #### Day 9 - [Stream Processing](http://adventofcode.com/2017/day/9)
 I wrote a function that simultaneously filters out, and counts the number of garbage characters removed. If this isn't a better example of a needing a function with multiple return values, I don't know what is! I passed in a StringBuilder reference as a quick workaround. This solves part 2!
 Then, my part 1 function simply steps into and out of the brackets, keeping track of the current depth of the bracket tree, and keeping a tally of the depths once each bracket is closed. Both solutions run in linear time and space.
+
+#### Day 10 - [Knot Hash](http://adventofcode.com/2017/day/10)
+This one doesn't involve any problem-solving. Follow the instructions given carefully, and transcribe the step-by-step directions into actual code! It was interesting to implement a type of hash. However, I like being challenged and today's puzzle doesn't require any problem solving :c
