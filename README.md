@@ -49,7 +49,9 @@ Then, my part 1 function simply steps into and out of the brackets, keeping trac
 #### Day 10 - [Knot Hash](http://adventofcode.com/2017/day/10)
 Follow the instructions given carefully, and transcribe the step-by-step directions into actual code! It was interesting to implement a type of hash. However, I like being challenged and today's puzzle doesn't require much problem solving :c
 
-
 #### Day 11 - [Hex Ed](http://adventofcode.com/2017/day/11)
 This problem was pretty fun. An observation is made that any set of moves reduces to a combination of a number of north moves, and a number of northwest moves. South is represented as a _negative_ north move, and southwest is represented as a negative north move, plus a northwest move.
 After writing a O(1) distance function that takes parameters _n_ and _nw_ and returns the distance, both parts can be calculated easily.
+
+#### Day 12 - [Digital Plumber](http://adventofcode.com/2017/day/12)
+I used a map to store the graph represented by the pipes, and performed a simple depth-first search on the zeroth program to solve part 1. Passing along a reference to a hash set holding previously visited programs prevents double counting. Part 2 involves applying the part 1 function, on all other root nodes, whilst re-using the same hash set. Any distinct groups will return with size > 0.
