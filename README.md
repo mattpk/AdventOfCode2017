@@ -55,3 +55,6 @@ After writing a O(1) distance function that takes parameters _n_ and _nw_ and re
 
 #### Day 12 - [Digital Plumber](http://adventofcode.com/2017/day/12)
 I used a map to store the graph represented by the pipes, and performed a simple depth-first search on the zeroth program to solve part 1. Passing along a reference to a hash set holding previously visited programs prevents double counting. Part 2 involves applying the part 1 function, on all other root nodes, whilst re-using the same hash set. Any distinct groups will return with size > 0.
+
+#### Day 13 - [Packet Scanners](http://adventofcode.com/2017/day/13)
+I solved the first part by iterating over the layers, using modulo to calculate if the scanner catches us, and summing up the severity. This takes O(n) time, given n layers. The second part attempts delays with the part 1 function until we find a winner. This runs nearly instantly due to our small input.
