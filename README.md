@@ -58,3 +58,6 @@ I used a map to store the graph represented by the pipes, and performed a simple
 
 #### Day 13 - [Packet Scanners](http://adventofcode.com/2017/day/13)
 I solved the first part by iterating over the layers, using modulo to calculate if the scanner catches us, and summing up the severity. This takes O(n) time, given n layers. The second part attempts delays with the part 1 function until we find a winner. This runs nearly instantly due to our small input.
+
+#### Day 14 - [Disk Defragmentation](http://adventofcode.com/2017/day/14)
+For part 1, construct the grid as specified and count the number of used cells. The knot hash function from Day 10 comes in handy. Next, implement the flood-fill algorithm on each cell in the grid. Count and return the number of successful fills for the second half of the problem. The flood fill algorithm should take O(n * n) time, where n is the size of the grid (128 in this case).
