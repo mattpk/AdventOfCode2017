@@ -61,3 +61,6 @@ I solved the first part by iterating over the layers, using modulo to calculate 
 
 #### Day 14 - [Disk Defragmentation](http://adventofcode.com/2017/day/14)
 For part 1, construct the grid as specified and count the number of used cells. The knot hash function from Day 10 comes in handy. Next, implement the flood-fill algorithm on each cell in the grid. Count and return the number of successful fills for the second half of the problem. The flood fill algorithm should take O(n * n) time, where n is the size of the grid (128 in this case).
+
+#### Day 15 - [Dueling Generators](http://adventofcode.com/2017/day/15)
+I transcribed the description of the generators into code modelling their behavior. Using a bitmask helps isolate the lowest 16 bits easily. This runs quickly and is simple. In most cases, a do-while loop in a language like Java can be written more clearly as a while loop, but I'd argue part 2's generation function is an exception.
